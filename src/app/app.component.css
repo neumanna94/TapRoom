@@ -1,0 +1,25 @@
+.jumbotron {
+  background-image: url("http://www.dcbeer.com/sites/default/files/styles/header_img/public/default_images/about_0.jpg?itok=0qghMKbW");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron h1 {
+  color: white;
+  font-size: 80px;
+  font-family: "Times New Roman", Times, serif;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  color: white;
+  background-color: #ECC475;
+  text-align: center;
+  opacity: 0.8;
+  box-shadow: 0 0 5px black;
+  font-size: 16px;
+  font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
