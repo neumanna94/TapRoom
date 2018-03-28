@@ -1,3 +1,21 @@
-<p>
-  keg-list works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Price</th>
+      <th scope="col">Alcohol Content</th>
+      <th scope="col">Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let currentKeg of childKegList">
+      <td>{{currentKeg.name}}</td>
+      <td>{{currentKeg.brand}}</td>
+      <td>{{currentKeg.price}}</td>
+      <td>{{currentKeg.alcoholContent}}</td>
+      <td>{{currentKeg.volume}}</td>
+    </tr>
+
+  </tbody>
+</table>
