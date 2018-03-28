@@ -8,8 +8,14 @@ import { Keg } from '../models/keg.model';
 })
 export class KegListComponent {
   @Input() childKegList: Keg[];
+  @Output() clickSender = new EventEmitter();
   filterByInput: string = "alpha";
 
+  editButtonClicked(kegToEdit: Keg) {
+    console.log(kegToEdit);
+    this.clickSender.emit(kegToEdit);
+
+  }
   onChange(optionFromMenu) {
     this.filterByInput = optionFromMenu;
     console.log(this.filterByInput);

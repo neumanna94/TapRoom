@@ -5,8 +5,7 @@
 <div class="container-flex">
   <div class="row">
     <div class="col-md-12">
-      <app-keg-list [childKegList]="masterKegList"></app-keg-list>
-      <app-edit-keg></app-edit-keg>
+      <app-keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
     </div>
   </div>
   <div class="row">
@@ -14,6 +13,7 @@
       <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
     </div>
     <div class="col-md-6">
+      <app-edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></app-edit-keg>
     </div>
   </div>
   <footer>Alexander Neumann @ Epicodus 2018</footer>

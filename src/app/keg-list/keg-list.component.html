@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor = "let currentKeg of childKegList">
-        <td>{{currentKeg.name}}</td>
+        <a href="#" (click)="editButtonClicked(currentKeg)"><td>{{currentKeg.name}}</td></a>
         <td>{{currentKeg.brand}}</td>
         <td>{{currentKeg.price}}</td>
         <td>{{currentKeg.alcoholContent}}</td>
