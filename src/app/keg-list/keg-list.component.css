@@ -2,3 +2,9 @@ thead {
   background-color: #ECC475;
   color: white;
 }
+.display {
+  margin-top: -3.0%;
+}
+select{
+  width: 100%;
+}

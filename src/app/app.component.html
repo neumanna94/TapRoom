@@ -3,10 +3,18 @@
   <h1 style="text-align:center">{{title}}</h1>
 </div>
 <div class="container-flex">
-  <div class="col-md-12-flex">
-    <app-keg-list [childKegList]="masterKegList"></app-keg-list>
-    <app-edit-keg></app-edit-keg>
-    <app-new-keg></app-new-keg>
+  <div class="row">
+    <div class="col-md-12">
+      <app-keg-list [childKegList]="masterKegList"></app-keg-list>
+      <app-edit-keg></app-edit-keg>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-new-keg (sendKeg)="addKeg($event)"></app-new-keg>
+    </div>
+    <div class="col-md-6">
+    </div>
   </div>
   <footer>Alexander Neumann @ Epicodus 2018</footer>
 </div>

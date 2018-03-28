@@ -1,21 +1,30 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Brand</th>
-      <th scope="col">Price</th>
-      <th scope="col">Alcohol Content</th>
-      <th scope="col">Volume</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor = "let currentKeg of childKegList">
-      <td>{{currentKeg.name}}</td>
-      <td>{{currentKeg.brand}}</td>
-      <td>{{currentKeg.price}}</td>
-      <td>{{currentKeg.alcoholContent}}</td>
-      <td>{{currentKeg.volume}}</td>
-    </tr>
+<div class="display">
+  <select (change)="onChange($event.target.value)">
+    <option value="name" selected="selected">Sort by alphabetically</option>
+    <option value="brand">Sort by brand</option>
+    <option value="price">Sort by price</option>
+    <option value="alcoholContent">Sort by alcohol</option>
+    <option value="volume">Sort by volume</option>
+  </select>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Price</th>
+        <th scope="col">Alcohol Content</th>
+        <th scope="col">Volume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let currentKeg of childKegList">
+        <td>{{currentKeg.name}}</td>
+        <td>{{currentKeg.brand}}</td>
+        <td>{{currentKeg.price}}</td>
+        <td>{{currentKeg.alcoholContent}}</td>
+        <td>{{currentKeg.volume}}</td>
+      </tr>
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>

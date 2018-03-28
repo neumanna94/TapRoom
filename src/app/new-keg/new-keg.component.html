@@ -1,3 +1,24 @@
-<p>
-  new-keg works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Enter a beer to add to the table:</h4>
+      <label>Name:</label>
+      <input #name>
+      <br>
+      <label>Label:</label>
+      <input #label>
+      <br>
+      <label>Alcohol:</label>
+      <input #alcohol>
+      <br>
+      <label>Price:</label>
+      <input #price>
+      <br>
+      <label>Volume:</label>
+      <input #volume>
+      <br>
+      <button (click)="submitForm(name.value, label.value,price.value, alcohol.value,volume.value); name.value=''; label.value=''; price.value=''; alcohol.value=''; volume.value='';">Add</button>
+
+    </div>
+  </div>
+</div>
